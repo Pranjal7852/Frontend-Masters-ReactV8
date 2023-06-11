@@ -1,0 +1,1 @@
+export const animalData = ["","lion" ,"zebra", "peacock", "reptile"];
