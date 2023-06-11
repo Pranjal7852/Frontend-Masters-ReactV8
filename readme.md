@@ -1,3 +1,3 @@
-## This is work in progess reposotiry
+## This is a work in progess reposotiry
 
-Link for the course followed [Here]{https://frontendmasters.com/courses/complete-react-v8/}.
+Link for the course followed [Here](https://frontendmasters.com/courses/complete-react-v8/).
