@@ -1,16 +1,15 @@
-import React from 'react'
+import React from "react";
 
 const Pet = (prams) => {
   return (
     <>
-    <br></br>
-    <div>Name{prams.name} </div>
-    
-     <div>breed is {prams.breed}</div>
-     <div>location {prams.location} </div>
-     <br></br>
-     </>
-  )
-}
+      <br></br>
+      <div>{prams.name} </div>
+      <div> {prams.breed}</div>
+      <div>{prams.location} </div>
+      <br></br>
+    </>
+  );
+};
 
-export default Pet
+export default Pet;
