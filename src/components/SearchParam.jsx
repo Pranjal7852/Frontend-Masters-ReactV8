@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { animalData } from "../data/animals";
+import useBreedList from "../useBreedList";
 import Pet from "./Pet";
 
 const SearchParam = () => {
@@ -9,14 +10,15 @@ const SearchParam = () => {
   const [animal, setAnimal] = useState("");
   const [breed, setBreed] = useState("");
   const [petData, setPetData] = useState([]);
+  const [breedData, loading] = useBreedList(animal);
 
-    const breedData = [];
 
     //all my effects here
     useEffect(()=>{
       getPetList();
     },[])
-
+    
+    
     async function getPetList () {
       const res = await fetch(`http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`)
       const dataJson = await res.json();
@@ -41,7 +43,7 @@ const SearchParam = () => {
                 })}
             </select>
         </label>
-        <label htmlFor="breed"> Choose a Animal
+        <label htmlFor="breed"> Choose a Breed
             <select id="breed" name="breed" onChange={(e)=>{setBreed(e.target.value)}} disabled={breedData.length === 0}>
                 {breedData.map((data)=> {
                  return <option key={data}>{data}</option>   
