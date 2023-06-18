@@ -1,19 +1,12 @@
 import React from "react";
 import Pet from "./Pet";
 
-const Results = (props) => {
+const Results = ({ petData }) => {
   return (
     <div className="search">
-      {props.petData ? (
-        props.petData.map((data) => {
-          return (
-            <Pet
-              name={data.name}
-              breed={data.breed}
-              location={data.city}
-              key={data.id}
-            ></Pet>
-          );
+      {petData.length ? (
+        petData.map((data) => {
+          return <Pet {...data} key={data.id}></Pet>;
         })
       ) : (
         <h1>No data Found</h1>
