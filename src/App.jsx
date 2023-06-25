@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import SearchParam from "./components/SearchParam";
-import Deatils from "./components/Details";
+import Details from "./components/Details";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <div>
           <h1>Adopt Me!</h1>
           <Routes>
-            <Route path="/details/:id" element={<Deatils />} />
+            <Route path="/details/:id" element={<Details />} />
             <Route path="/" element={<SearchParam></SearchParam>}></Route>
           </Routes>
         </div>

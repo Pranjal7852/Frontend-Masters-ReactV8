@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { animalData } from "../data/animals";
-import Results from "./Results";
+import Results from "./Results.jsx";
 import useBreedList from "../useBreedList";
 import Pet from "./Pet";
 
